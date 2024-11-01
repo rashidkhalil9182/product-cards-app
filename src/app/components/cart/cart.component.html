@@ -1,0 +1,15 @@
+<!-- cart.component.html -->
+<div class="cart-container">
+  <h2>Recent Purchases</h2>
+  <div *ngIf="recentPurchases.length === 0" class="empty-cart">
+    No recent purchases.
+  </div>
+  <div class="cart-wrapper">
+  <div *ngFor="let item of recentPurchases" class="cart-item" @fadeIn>
+    <h4>{{ item.title }}</h4>
+    <p>Price: ${{ item.price | number: '1.2-2' }}</p>
+    <p>Quantity: {{item.quantity}}</p>
+    <p>Purchased on: {{ item.purchasedDate | date: 'short' }}</p>
+  </div>
+</div>
+</div>

@@ -1,0 +1,13 @@
+<div class="product-list" appInfiniteScroll (scrolled)="loadMoreProducts()">
+  <!-- Display each product as a card -->
+  <app-product-card
+    *ngFor="let product of products"
+    [product]="product"
+    (addedToCart)="addToCart(product)">
+  </app-product-card>
+</div>
+
+<!-- Loading indicator for infinite scroll -->
+<div class="loading" *ngIf="isLoading">
+  Loading more products...
+</div>

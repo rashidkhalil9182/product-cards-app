@@ -1,0 +1,23 @@
+<div class="app-container">
+  <header class="app-header">
+    <h1>Product Cards App</h1>
+    <nav>
+      <ul class="nav-list">
+        <li>
+          <a routerLink="/home" routerLinkActive="active-link" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a routerLink="/cart" routerLinkActive="active-link" aria-current="page">Cart</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <router-outlet></router-outlet> <!-- This will load the routed components -->
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; 2024 Product Cards App. All rights reserved.</p>
+  </footer>
+</div>

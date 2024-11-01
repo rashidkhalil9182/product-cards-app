@@ -1,0 +1,66 @@
+
+.app-main{
+  padding-bottom: 40px;
+}
+.app-header {
+  background-color: #f8f9fa; /* Light background for clarity */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #333; /* Dark color for better readability */
+  font-size: 1.8rem;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+}
+
+.nav-list li {
+  display: inline;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333; /* Neutral color for links */
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  &.active-link{
+    color: #fff;
+    background-color: #007bff; /* Primary color for active links */
+    border-radius: 4px !important;
+  }
+}
+
+.nav-list a:hover {
+  background-color: #e2e6ea;
+}
+
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+  color: #555;
+  p{
+    margin: 0;
+  }
+}

@@ -1,0 +1,26 @@
+
+<div
+  class="card"
+  @fadeIn
+>
+  <div class="card-header">
+    <h3>{{ product.title }}</h3>
+  </div>
+  <div class="card-body">
+    <img [src]="product.image" alt="{{ product.title }}" class="product-image" />
+    <p class="description">{{ product.description }}</p>
+  </div>
+  <div class="card-footer">
+    <span class="price">${{ product.price | number: '1.2-2' }}</span>
+    <div *ngIf="product.quantity > 0" class="quantity-added">
+      Added to cart: {{ product.quantity }} {{ product.quantity === 1 ? 'item' : 'items' }}
+    </div>
+    <button
+      (click)="addToCart()"
+      class="buy-button"
+      [@buttonHover]="isHovered ? 'hover' : '*'"
+    >
+      Buy
+    </button>
+  </div>
+</div>
